@@ -1,2 +1,1 @@
-# cisc3130fa24.github.io - ol
- another line
+# cisc3130fa24.github.io
