@@ -1,3 +1,0 @@
-# cisc3130fa24.github.io
-
-trying this out...
