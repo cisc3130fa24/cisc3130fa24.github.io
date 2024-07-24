@@ -7,25 +7,11 @@ h1 {
     text-align: center;
 }
 
-/*
-.resources, .updates {
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    overflow: hidden;
-    margin-bottom: 20px;
-}
-*/
-
 .collapsible-content {
-    display: none; /* Ensure content is collapsed by default */
+    display: none; /* ensure content is collapsed by default */
 }
 
 .collapsible-header {
-    /*
-    background-color: #f1f1f1;
-    padding: 10px;  
-    
-    */
     transition: background-color 0.3s;
     align-items: center;
     display: flex;
