@@ -3,6 +3,44 @@ body {
     margin: 20px;
 }
 
+h1 {
+    text-align: center;
+}
+
+/*
+.resources, .updates {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+*/
+
+.collapsible-content {
+    display: none; /* Ensure content is collapsed by default */
+}
+
+.collapsible-header {
+    /*
+    background-color: #f1f1f1;
+    padding: 10px;  
+    
+    */
+    transition: background-color 0.3s;
+    align-items: center;
+    display: flex;
+    cursor: pointer;
+}
+
+.collapsible-header:hover {
+    background-color: #e0e0e0;
+}
+
+.icon {
+    margin-right: 10px;
+    transition: transform 0.3s;
+}
+
 table {
     width: 100%;
     border-collapse: collapse;

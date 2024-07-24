@@ -7,23 +7,100 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<div class="updates">
-    <h2>Updates</h2>
-    <ul>
-        <li>9/27: added ...</li>
-        <li>9/28: updated ...</li>      
-    </ul>
-</div>
+
+<h1>Data Structures, Fall 2024</h1>
 
 <div class="syllabus">
-    <h2>Syllabus: <a href="#">MW9</a>, <a href="#">TR9</a></h2>
+    <div class="collapsible-header" onclick="toggleCollapsible(this)">
+        <span class="icon">▶</span>
+        <h3>Syllabus</h3>
+    </div>
+    <div class="collapsible-content">
+        <ul>
+            <li>MW9</li>
+            <li>TR9</li>
+        </ul>
+    </div>
 </div>
 
 <div class="resources">
-    <h2><a href="#">Resources</a></h2>
+    <div class="collapsible-header" onclick="toggleCollapsible(this)">
+        <span class="icon">▶</span>
+        <h3>Resources</h3>
+    </div>
+    <div class="collapsible-content">
+        <ul>
+            <li><a href="https://www.jetbrains.com/idea/download/">IntelliJ IDEA</a> (scroll down for the free Community Edition)</li>
+            <li>
+                <a href="https://cscircles.cemc.uwaterloo.ca/java_visualize/#">Java Visualizer</a> (make sure to click the two left options to get a more accurate diagram of memory)
+                <ul>
+                    <li>Also available as an <a href="https://plugins.jetbrains.com/plugin/11512-java-visualizer">IntelliJ plugin</a></li>
+                    <li>A similar tool: <a href="https://pythontutor.com/java.html#mode=edit">Python Tutor</a> (not only for Python)</li>
+                </ul>
+            </li>
+            <li>
+                Interview prep:
+                <ul>
+                    <li>
+                        <a href="https://leetcode.com/problemset/">Leetcode</a>:
+                        <ul>
+                            <li>My <a href="https://docs.google.com/document/d/1I7Nz_uYnsk1r7wZG5ft1c4zdOGCzksIkDrZYM3Eo6QA/edit">Leetcode list for CISC 1115, 3115, and 3130</a></li>
+                            <li><a href="https://neetcode.io/practice">Neetcode</a></li>
+                            <li><a href="https://www.techinterviewhandbook.org/grind75?mode=all">Grind 75</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="https://www.techinterviewhandbook.org/software-engineering-interview-guide/">Tech Interview Handbook</a></li>
+                </ul>
+            </li>
+            <li>
+                Java practice
+                <ul>
+                    <li><a href="https://codingbat.com/java">CodingBat</a> (relatively easy)</li>
+                    <li><a href="https://practiceit.cs.washington.edu/problem/list">Practice-It</a></li>
+                    <li><a href="https://www.codestepbystep.com/problem/list/java">CodeStepByStep</a></li>
+                </ul>
+            </li>
+            <li>
+                YouTube playlists:
+                <ul>
+                    <li><a href="https://www.youtube.com/playlist?list=PLBZBJbE_rGRV8D7XZ08LK6z-4zPoWzu5H">Data Structures and Algorithms</a> by CS Dojo</li>
+                    <li><a href="https://www.youtube.com/playlist?list=PLpPXw4zFa0uKKhaSz87IowJnOTzh9tiBk">Data Structures</a> by Rob Edwards</li>
+                </ul>
+            </li>
+            <li>
+                Animations/visualizations for many data structures and sorting algorithms:
+                <ul>
+                    <li><a href="https://yongdanielliang.github.io/animation/animation.html">Animations</a> by Y. Daniel Liang</li>
+                    <li><a href="https://visualgo.net/en">VisuAlgo</a></li>
+                    <li><a href="https://www.cs.usfca.edu/~galles/visualization/Algorithms.html">Visualizations</a> by David Galles</li>
+                </ul>
+            </li>
+            <li>
+                Optional books:
+                <ul>
+                    <li><i>Building Java Programs: A Back to Basics Approach</i> (covers CISC 1115, 3115, and 3130)</li>
+                    <li><i>Effective Java</i> (highly recommended if you want to know how to <i>really</i> program in Java)</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
 </div>
 
-<!--<div class="horizontal-line"></div>-->
+<div class="updates">
+    <div class="collapsible-header" onclick="toggleCollapsible(this)">
+        <span class="icon">▶</span>
+        <h3>Updates</h3>
+    </div>
+    <div class="collapsible-content">
+        <ul>
+            <li></li>
+        </ul>
+    </div>
+</div>
+
+<script src="script.js"></script>
+
+<br>
 
 <table>
     <tr>
@@ -37,30 +114,44 @@
             Some prerequisites
             <ul>
                 <li>equals and hashCode</li>
-                <li>interfaces and Comparable</li>
+                <li>interfaces</li>
+                <li>the Comparable and Comparator interfaces</li>
                 <li>static factory methods</li>
                 <li>vararg parameters</li>
-                <li>List and ArraysList</li>
+                <li>List and ArrayList</li>
             </ul>
         </td>
         <td>
             <ul>
                 <li>Meeting 1: 8/28, repeated 8/29</li>
-                <li>Meeting 2a: 9/3, repeated 9/4</li>
-                <li>Q&A meetings: 9/1 and 9/8</li>
+                <li>Q&A meeting: 9/1</li>
             </ul>
         </td>
         <td>
             <ul>
                 <li>Code</li>
-                <li>Notes (incl. lecture notes)</li>
-                <li>Other links</li>
+                <li>Slides</li>
+                <li>
+                    Documentation:
+                    <ul>
+                        <li>the Object class</li>
+                        <li>the Comparable and Comparator interfaces</li>
+                        <li>the List interface and the ArrayList class</li>
+                    </ul>
+                </li>
+                <li>
+                    Optional reading: 
+                    <ul>
+                        <li><a href="https://web.mit.edu/6.031/www/sp21/classes/15-equality/#_vs_equals">Reading 15</a> from MIT 6.031 (Spring 2021)</li>
+                        <li><a href="https://jenkov.com/tutorials/java-collections/comparable.html">Java Comparable</a> by Jacob Jenkov</li>
+                        <li><i>Effective Java</i>, items 1, 10, 11, 14, 53, and 64</li>
+                    </ul>
+                </li>
             </ul>
         </td>
         <td>
             <ul>
-                <li>Assignment 1, due x/y</li>
-                <li>Exam prep exercises</li>
+                <li>HW 1</li>
             </ul>
         </td>
     </tr>
@@ -68,14 +159,173 @@
         <td>ADTs</td>
         <td>
             <ul>
-                <li>Meeting 2b: 9/3, repeated 9/4</li>
-                <li>Q&A meeting: 9/18</li>
+                <li>Meeting 2: 9/3, repeated 9/4</li>
+                <li>Q&A meeting: </li>
             </ul>
         </td>
         <td>
             <ul>
                 <li>Code</li>
-                <li>Notes</li>
+                <li>Slides</li>
+                <li>
+                    Optional reading: Readings <a href="https://web.mit.edu/6.031/www/sp21/classes/10-abstract-data-types/">10</a>, <a href="https://web.mit.edu/6.031/www/sp21/classes/11-abstraction-functions-rep-invariants/">11</a>, <a href="https://web.mit.edu/6.031/www/sp21/classes/12-interfaces-generics-enums/">12</a>, and <a href="https://web.mit.edu/6.031/www/sp21/classes/15-equality/">15</a> from MIT 6.031 (Spring 2021)
+                </li>
+            </ul>
+        </td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>
+            Generics
+            <ul>
+                <li>generic classes and interfaces</li>
+                <li>generic static methods</li>
+                <li>bounded type parameters</li>
+                <li>wildcards</li>
+                <li>restrictions on generics</li>
+            </ul>
+        </td>
+        <td>
+            <ul>
+                <li>Meeting 3</li>
+                <li>Q&A meeting</li>
+            </ul>
+        </td>
+        <td>
+            <ul>
+                <li>Code</li>
+                <li>Slides</li>
+                <li>Two introductory videos: <a href="https://www.youtube.com/watch?v=CN27X68YO4I">video 1</a>, <a href="https://www.youtube.com/watch?v=K1iu1kXkVoA">video 2</a></li>
+                <li>
+                    Optional reading:
+                    <ul>
+                        <li><a href="https://dev.java/learn/generics/">Generics</a> on dev.java</li>
+                        <li><a href="http://www.angelikalanger.com/GenericsFAQ/JavaGenericsFAQ.html">Java Generics FAQ</a> by Angelika Langer</li>
+                    </ul>
+                </li>
+            </ul>
+        </td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>
+            The Java Collections Framework
+            <ul>
+                <li>basic interfaces</li>
+                <li>unmodifiable collections</li>
+                <li>views</li>
+                <li>iterators</li>
+                <li>abstract collection classes</li>
+            </ul>
+        </td>
+        <td>
+            <ul>
+                <li>Meeting 4</li>
+                <li>Meeting 5a</li>
+                <li>Q&A meeting</li>
+            </ul>
+        </td>
+        <td>
+            <ul>
+                <li>Diagrams: mine, another</li>
+                <li>Code</li>
+                <li>Slides</li>
+                <li>
+                    Documentation:
+                    <ul>
+                        <li>collections framework <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/doc-files/coll-overview.html">overview</a> and <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/doc-files/coll-reference.html">outline</a></li>
+                        <li>primary interfaces: Collection, SequencedCollection (Java 21+), List, Set, Queue, Map</li>
+                        <li>the Collections class</li>
+                        <li>iteration-related interfaces: Iterable, Iterator, ListIterator</li>
+                    </ul>
+                </li>
+                <li>Optional reading: <a href="https://dev.java/learn/api/collections-framework/">The Collections Framework</a> on dev.java</li>
+                <li>
+                    Optional videos:
+                    <ul>
+                        <li><a href="https://www.youtube.com/watch?v=OJrIMv4dAek">Young Pups: New Collections APIs for Java 9</a> by Stuart Marks</li>
+                        <li><a href="https://www.youtube.com/watch?v=TZDgYA2YDqA">Beneath the Planet of the Collections</a> by Stuart Marks and Maurice Naftalin</li>
+                        <li><a href="https://www.youtube.com/watch?v=fdFM5CFqv6o">Sequenced Collections</a> by Stuart Marks</li>
+                        <li><a href="https://www.youtube.com/watch?v=OXdm5BzQ8mI">Collections Corner Cases</a> by Stuart Marks</li>
+                        <li><a href="https://youtu.be/w6hhjg_gt_M?si=xDMDdsePHFghmBNF">Java Collections Puzzlers</a> by Maurice Naftalin and José Paumard</li>
+                    </ul>
+                </li>
+            </ul>
+        </td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Recursion</td>
+        <td>
+            <ul>
+                <li>Meeting 5b: </li>
+                <li>Meeting 6a: </li>
+                <li>Q&A meeting</li>
+            </ul>
+        </td>
+        <td>
+            <ul>
+                <li>Code</li>
+                <li>Slides</li>
+                <li>Optional reading: <a href="https://web.mit.edu/6.031/www/sp21/classes/14-recursion/">Reading 14</a> from MIT 6.031 (Spring 2021)</li>
+            </ul>
+        </td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Sorting and searching</td>
+        <td>
+            <ul>
+                <li>Meeting 6b: </li>
+                <li>Meeting 7: </li>
+                <li>Q&A meeting: </li>
+                <li></li>
+            </ul>
+        </td>
+        <td>
+            <ul>
+                <li>Code</li>
+                <li>Slides</li>
+                <li>Documentation: the Arrays class</li>
+                <li>
+                    Optional reading:
+                    <ul>
+                        <li><a href="https://research.google/blog/extra-extra-read-all-about-it-nearly-all-binary-searches-and-mergesorts-are-broken/">blog post</a> by Josh Bloch about a common bug in binary search</li>
+                    </ul>
+                </li>
+            </ul>
+        </td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Algorithmic complexity</td>
+        <td>
+            <ul>
+                <li>Meeting 8: </li>
+                <li>Meeting 9a: </li>
+                <li>Q&A meeting: </li>
+            </ul>
+        </td>
+        <td>
+            <ul>
+                <li>Code</li>
+                <li>Slides</li>
+            </ul>
+        </td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Dynamic array-based lists</td>
+        <td>
+            <ul>
+                <li>Meeting 9b: </li>
+            </ul>
+        </td>
+        <td>
+            <ul>
+                <li>Code</li>
+                <li>Slides</li>
+                <li>Documentation: the ArrayList class</li>
             </ul>
         </td>
         <td></td>
@@ -84,16 +334,217 @@
         <td>Exam 1</td>
         <td>
             <ul>
-                <li>Q&A meeting: 9/26</li>
-                <li>Section TR exam: 10/8</li>
-                <li>Section MW exam: 10/9</li>
+                <li>Q&A meeting: 10/6 on Zoom</li>
+                <li>Section TR9 exam date: 10/8</li>
+                <li>Section MW9 exam date: 10/9</li>
             </ul>
         </td>
         <td>
             <ul>
                 <li>Exam Information</li>
-                <li>TR solutions</li>
-                <li>MW solutions</li>
+                <li>TR9 solutions</li>
+                <li>MW9 solutions</li>
+            </ul>
+        </td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Linked lists</td>
+        <td>
+            <ul>
+                <li></li>
+                <li></li>
+            </ul>
+        </td>
+        <td>
+            <ul>
+                <li>Code</li>
+                <li>Slides</li>
+                <li>Documentation: the LinkedList class</li>
+            </ul>
+        </td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Stacks, queues, and deques</td>
+        <td>
+            <ul>
+                <li></li>
+                <li></li>
+            </ul>
+        </td>
+        <td>
+            <ul>
+                <li>Code</li>
+                <li>Slides</li>
+                <li>
+                    Documentation: 
+                    <ul>
+                        <li>the Queue and Deque interfaces</li>
+                        <li>the LinkedList, ArrayDeque, and (legacy) Stack classes</li>
+                    </ul>
+                </li>
+            </ul>
+        </td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Hash tables</td>
+        <td>
+            <ul>
+                <li></li>
+                <li></li>
+            </ul>
+        </td>
+        <td>
+            <ul>
+                <li>Code</li>
+                <li>Slides</li>
+                <li>
+                    Documentation: 
+                    <ul>
+                        <li>the Set, SequencedSet, Map and SequencedMap interfaces</li>
+                        <li>the HashSet, LinkedHashSet, HashMap, and LinkedHashMap classes</li>
+                    </ul>
+                </li>
+            </ul>
+        </td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Trees</td>
+        <td>
+            <ul>
+                <li></li>
+                <li></li>
+            </ul>
+        </td>
+        <td>
+            <ul>
+                <li>Code</li>
+                <li>Slides</li>
+            </ul>
+        </td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>BSTs and sorted sets and maps</td>
+        <td>
+            <ul>
+                <li></li>
+                <li></li>
+            </ul>
+        </td>
+        <td>
+            <ul>
+                <li>Code</li>
+                <li>Slides</li>
+                <li>
+                    Documentation: 
+                    <ul>
+                        <li>the SortedSet, NavigableSet, SortedMap, and NavigableMap interfaces</li>
+                        <li>the TreeSet and TreeMap classes</li>
+                    </ul>
+                </li>
+            </ul>
+        </td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Exam 2</td>
+        <td>
+            <ul>
+                <li>Q&A meeting: 11/24 on Zoom</li>
+                <li>Section MW9 exam date: 11/25</li>
+                <li>Section TR9 exam date: 11/26</li>
+            </ul>
+        </td>
+        <td>
+            <ul>
+                <li>Exam Information</li>
+                <li>Section TR9 solutions</li>
+                <li>Section MW9 solutions</li>
+            </ul>
+        </td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Heaps</td>
+        <td>
+            <ul>
+                <li></li>
+                <li></li>
+            </ul>
+        </td>
+        <td>
+            <ul>
+                <li>Code</li>
+                <li>Slides</li>
+                <Li>Documentation: the PriorityQueue class</Li>
+            </ul>
+        </td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Lambdas</td>
+        <td>
+            <ul>
+                <li></li>
+                <li></li>
+            </ul>
+        </td>
+        <td>
+            <ul>
+                <li>Code</li>
+                <li>Slides</li>
+                <li>Documentation: 
+                    <ul>
+                        <li>functional interfaces: Comparator and everything in java.util.function package</li>
+                        <li>using lambdas with the JCF: Iterable, Collection, Map</li>
+                    </ul>
+                </li>
+                <li>Optional reading: <a href="https://dev.java/learn/lambdas/">Lambda Expressions</a> on dev.java</li>
+            </ul>
+        </td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Streams</td>
+        <td>
+            <ul>
+                <li></li>
+                <li></li>
+            </ul>
+        </td>
+        <td>
+            <ul>
+                <li>Code</li>
+                <li>Slides</li>
+                <li>Documentation: the java.util.stream package</li>
+                <li>Optional reading: 
+                    <ul>
+                        <li><a href="https://dev.java/learn/api/streams/">The Stream API</a> and <a href="https://dev.java/learn/refactoring-to-functional-style/">Refactoring from the Imperative to the Functional Style</a> on dev.java</li>
+                        <li><a href="https://web.mit.edu/6.031/www/sp21/classes/26-map-filter-reduce/">Reading 26</a> from MIT 6.031 (Spring 2021)</li>
+                    </ul>
+                </li>  
+            </ul>
+        </td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Final exam</td>
+        <td>
+            <ul>
+                <li>Q&A meeting: 12/15 on Zoom</li>
+                <li>Section MW9 exam date: </li>
+                <li>Section TR9 exam date: </li>
+            </ul>
+        </td>
+        <td>
+            <ul>
+                <li>Exam Information</li>
+                <li>Section TR9 solutions</li>
+                <li>Section MW9 solutions</li>
             </ul>
         </td>
         <td></td>
