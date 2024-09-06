@@ -7,10 +7,12 @@
     <link rel="stylesheet" href="styles.css">
 
     <script>
-        document.querySelectorAll('a').forEach(function(link) {
-            link.setAttribute('target', '_blank');
+        document.addEventListener("DOMContentLoaded", function() {
+            document.querySelectorAll('a').forEach(function(link) {
+                link.setAttribute('target', '_blank');
+            });
         });
-    </script>    
+    </script>        
 </head>
 <body>
 
