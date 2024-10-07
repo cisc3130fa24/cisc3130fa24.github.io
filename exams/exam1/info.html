@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework 1</title>
+    <link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body>
+    <h2>Exam 1 information</h2>
+
+    <p>
+        The first exam will be given on:
+        <ul>
+            Section MY9: Mon 10/21
+            Sections TY9 and TY2: Tue 10/22.
+        </ul>
+        You must take the exam with the section the you are registered for on CUNYfirst, unless you have received special permission from me otherwise. There will be different exams for the different sections.
+    </p>
+
+    <p>
+        On Mon 10/14, at 3pm, there will be a <a href="https://brooklyn-cuny-edu.zoom.us/j/84220772223?pwd=PVzzfw11NxszT65hbzr2Io2l8rsP5n.1">Zoom meeting</a> for Q&A about the exam.
+    </p>
+
+    <p>
+        The exam will cover material from the beginning of the course through the topic of dynamic array-based lists.
+    </p>
+
+    <h3>Types of questions</h3>
+    The following list covers all types of questions that might be asked. The actual exam that you take will likely not include all of the listed types. 
+    <ul>
+        <li>Writing a basic class, like TimeSpan from HW 2.</li>
+        <li>Writing <code>equals</code> and <code>hashCode</code> methods for a class.</li>
+        <li>Given a class, making class implement Comparable.</li>
+        <li>Given an array or List, write code to sort it by writing a Comparator and passing it to a sort method of the Java library.</li>
+        <li>Writing methods of BoundedList and ArrayBoundedList from HW 4 (partially based on HW 3).</li>
+        <li>Writing generic methods, including with wildcards and the <code>extends</code> and <code>super</code> keywords.</li>
+        <li>Given a generic method and a list of potential arguments to the method, indicate which ones are legal and which aren't.</li>
+        <li>Given a sorted array, trace the execution of binary search, without being provided with the code.</li>
+        <li>Given an array, trace the execution of the following sorting algorithms, without being provide with the code: selection sort, bubble sort (the optimized version), insertion sort, merge sort, and quicksort.</li>
+        <li>Given a piece of code, write the running time as a function of n using big-Oh notation.</li>
+        <li>Know the meaning of Iterable, Collection, SequencedCollection, and List in the Java Collections Framework.</li>
+        <li>
+            On List and ArrayList:
+            <ul>
+                <li>
+                    Know the following methods and constructors well:
+                    <ul>
+                        <li>
+                            The following methods of the List&lt;E&gt; interface:
+                            <ul>
+                                <li><code>int size()</code></li>
+                                <li><code>boolean isEmpty()</code></li>
+
+                                <li><code>void add(int index, E element)</code></li>
+                                <li><code>boolean add(E e)</code></li>
+                                <li><code>default void addFirst(E e)</code></li>
+                                <li><code>default void addLast(E e)</code></li>
+                                
+                                <li><code>E get(int index)</code></li>
+                                <li><code>default E getFirst()</code></li>
+                                <li><code>default E getLast()</code></li>
+
+                                <li><code>E set(int index, E element)</code></li>
+
+                                <li><code>boolean contains(Object o)</code></li>
+                                <li><code>int indexOf(Object o)</code></li>
+                                <li><code>int lastIndexOf(Object o)</code></li>
+
+                                <li><code>E remove(int index)</code></li>
+                                <li><code>boolean remove(Object o)</code></li>
+                                <li><code>default E removeFirst()</code></li>
+                                <li><code>default E removeLast()</code></li>
+                                <li><code>void clear()</code></li>
+
+                                <li><code>default void sort(Comparator<? super E> c)</code></li>
+
+                                <li><code>List<E> subList(int fromIndex, int toIndex)</code></li>
+                                <li><code>default List<E> reversed()</code></li>
+                                
+                                <li><code>static <E> List<E> of(E... elements)</code></li>
+                                <li><code>static <E> List<E> copyOf(Collection<? extends E> coll)</code></li>
+                                
+                                <li>
+                                    <code>Iterator<E> iterator()</code> and the following methods of Iterator&lt;E&gt;
+                                    <ul>
+                                        <li><code>boolean hasNext()</code></li>
+                                        <li><code>E next()</code></li>
+                                        <li><code>default void remove()</code></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            The following constructors of ArrayList&lt;E&gt;:
+                            <ul>
+                                <li><code>public ArrayList()</code></li>
+                                <li><code>public ArrayList(int initialCapacity)</code></li>
+                                <li><code>public ArrayList(Collection&lt;? extends E&gt; c)</code></li>
+                            </ul>
+                        </li>
+                        <li>
+                            The following List-related methods:
+                            <ul>
+                                <li><code>public static &lt;T&gt; List&lt;T&gt; asList(T... a)</code></li>
+                                <li><code>public static &lt;T&gt; List&lt;T&gt; unmodifiableList(List&lt;? extends T&gt; list)</code></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>Given code involving Lists or ArrayLists or Iterators obtained from them, determine what gets printed.</li>
+                <li>Given code involving a List or ArrayList or an Iterator obtained from one, determine the running time as a function of n (where n is the size of the list) using big-Oh notation.</li>
+            </ul>
+        </li>
+    </ul>
+</body>
