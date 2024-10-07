@@ -13,8 +13,8 @@
     <p>
         The first exam will be given on:
         <ul>
-            Section MY9: Mon 10/21
-            Sections TY9 and TY2: Tue 10/22.
+            <li>Section MY9: Mon 10/21</li>
+            <li>Sections TY9 and TY2: Tue 10/22.</li>
         </ul>
         You must take the exam with the section the you are registered for on CUNYfirst, unless you have received special permission from me otherwise. There will be different exams for the different sections.
     </p>
@@ -30,9 +30,9 @@
     <h3>Types of questions</h3>
     The following list covers all types of questions that might be asked. The actual exam that you take will likely not include all of the listed types. 
     <ul>
-        <li>Writing a basic class, like TimeSpan from HW 2.</li>
-        <li>Writing <code>equals</code> and <code>hashCode</code> methods for a class.</li>
-        <li>Given a class, making class implement Comparable.</li>
+        <li>Write a basic class, like TimeSpan from HW 2.</li>
+        <li>Write <code>equals</code> and <code>hashCode</code> methods for a class.</li>
+        <li>Given a class, make the class implement Comparable.</li>
         <li>Given an array or List, write code to sort it by writing a Comparator and passing it to a sort method of the Java library.</li>
         <li>Writing methods of BoundedList and ArrayBoundedList from HW 4 (partially based on HW 3).</li>
         <li>Writing generic methods, including with wildcards and the <code>extends</code> and <code>super</code> keywords.</li>
@@ -76,14 +76,14 @@
 
                                 <li><code>default void sort(Comparator<? super E> c)</code></li>
 
-                                <li><code>List<E> subList(int fromIndex, int toIndex)</code></li>
-                                <li><code>default List<E> reversed()</code></li>
+                                <li><code>List&lt;E&gt; subList(int fromIndex, int toIndex)</code></li>
+                                <li><code>default List&lt;E&gt; reversed()</code></li>
                                 
-                                <li><code>static <E> List<E> of(E... elements)</code></li>
-                                <li><code>static <E> List<E> copyOf(Collection<? extends E> coll)</code></li>
+                                <li><code>static <E> List&lt;E&gt; of(E... elements)</code></li>
+                                <li><code>static <E> List&lt;E&gt; copyOf(Collection&lt;? extends E&gt; coll)</code></li>
                                 
                                 <li>
-                                    <code>Iterator<E> iterator()</code> and the following methods of Iterator&lt;E&gt;
+                                    <code>Iterator&lt;E&gt; iterator()</code> and the following methods of the Iterator&lt;E&gt; interface:
                                     <ul>
                                         <li><code>boolean hasNext()</code></li>
                                         <li><code>E next()</code></li>
