@@ -53,70 +53,66 @@
             On List and ArrayList:
             <ul>
                 <li>
-                    Know the following methods and constructors well:
+                    Know the following methods of the List&lt;E&gt; interface:
                     <ul>
+                        <li><code>int size()</code></li>
+                        <li><code>boolean isEmpty()</code></li>
+
+                        <li><code>void add(int index, E element)</code></li>
+                        <li><code>boolean add(E e)</code></li>
+                        <li><code>default void addFirst(E e)</code></li>
+                        <li><code>default void addLast(E e)</code></li>
+                        
+                        <li><code>E get(int index)</code></li>
+                        <li><code>default E getFirst()</code></li>
+                        <li><code>default E getLast()</code></li>
+
+                        <li><code>E set(int index, E element)</code></li>
+
+                        <li><code>boolean contains(Object o)</code></li>
+                        <li><code>int indexOf(Object o)</code></li>
+                        <li><code>int lastIndexOf(Object o)</code></li>
+
+                        <li><code>E remove(int index)</code></li>
+                        <li><code>boolean remove(Object o)</code></li>
+                        <li><code>default E removeFirst()</code></li>
+                        <li><code>default E removeLast()</code></li>
+                        <li><code>void clear()</code></li>
+
+                        <li><code>default void sort(Comparator<? super E> c)</code></li>
+
+                        <li><code>List&lt;E&gt; subList(int fromIndex, int toIndex)</code></li>
+                        <li><code>default List&lt;E&gt; reversed()</code></li>
+                        
+                        <li><code>static <E> List&lt;E&gt; of(E... elements)</code></li>
+                        <li><code>static <E> List&lt;E&gt; copyOf(Collection&lt;? extends E&gt; coll)</code></li>
+                        
                         <li>
-                            The following methods of the List&lt;E&gt; interface:
+                            <code>Iterator&lt;E&gt; iterator()</code> and the following methods of the Iterator&lt;E&gt; interface:
                             <ul>
-                                <li><code>int size()</code></li>
-                                <li><code>boolean isEmpty()</code></li>
-
-                                <li><code>void add(int index, E element)</code></li>
-                                <li><code>boolean add(E e)</code></li>
-                                <li><code>default void addFirst(E e)</code></li>
-                                <li><code>default void addLast(E e)</code></li>
-                                
-                                <li><code>E get(int index)</code></li>
-                                <li><code>default E getFirst()</code></li>
-                                <li><code>default E getLast()</code></li>
-
-                                <li><code>E set(int index, E element)</code></li>
-
-                                <li><code>boolean contains(Object o)</code></li>
-                                <li><code>int indexOf(Object o)</code></li>
-                                <li><code>int lastIndexOf(Object o)</code></li>
-
-                                <li><code>E remove(int index)</code></li>
-                                <li><code>boolean remove(Object o)</code></li>
-                                <li><code>default E removeFirst()</code></li>
-                                <li><code>default E removeLast()</code></li>
-                                <li><code>void clear()</code></li>
-
-                                <li><code>default void sort(Comparator<? super E> c)</code></li>
-
-                                <li><code>List&lt;E&gt; subList(int fromIndex, int toIndex)</code></li>
-                                <li><code>default List&lt;E&gt; reversed()</code></li>
-                                
-                                <li><code>static <E> List&lt;E&gt; of(E... elements)</code></li>
-                                <li><code>static <E> List&lt;E&gt; copyOf(Collection&lt;? extends E&gt; coll)</code></li>
-                                
-                                <li>
-                                    <code>Iterator&lt;E&gt; iterator()</code> and the following methods of the Iterator&lt;E&gt; interface:
-                                    <ul>
-                                        <li><code>boolean hasNext()</code></li>
-                                        <li><code>E next()</code></li>
-                                        <li><code>default void remove()</code></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            The following constructors of ArrayList&lt;E&gt;:
-                            <ul>
-                                <li><code>public ArrayList()</code></li>
-                                <li><code>public ArrayList(int initialCapacity)</code></li>
-                                <li><code>public ArrayList(Collection&lt;? extends E&gt; c)</code></li>
-                            </ul>
-                        </li>
-                        <li>
-                            The following List-related methods:
-                            <ul>
-                                <li><code>public static &lt;T&gt; List&lt;T&gt; asList(T... a)</code></li>
-                                <li><code>public static &lt;T&gt; List&lt;T&gt; unmodifiableList(List&lt;? extends T&gt; list)</code></li>
+                                <li><code>boolean hasNext()</code></li>
+                                <li><code>E next()</code></li>
+                                <li><code>default void remove()</code></li>
                             </ul>
                         </li>
                     </ul>
                 </li>
+                <li>
+                    Know the following constructors of ArrayList&lt;E&gt;:
+                    <ul>
+                        <li><code>public ArrayList()</code></li>
+                        <li><code>public ArrayList(int initialCapacity)</code></li>
+                        <li><code>public ArrayList(Collection&lt;? extends E&gt; c)</code></li>
+                    </ul>
+                </li>
+                <li>
+                    Know the following List-related methods:
+                    <ul>
+                        <li><code>public static &lt;T&gt; List&lt;T&gt; asList(T... a)</code></li>
+                        <li><code>public static &lt;T&gt; List&lt;T&gt; unmodifiableList(List&lt;? extends T&gt; list)</code></li>
+                    </ul>
+                </li>
+               
                 <li>Given code involving Lists, ArrayLists, or Iterators obtained from them, determine what gets printed.</li>
                 <li>Given code involving a List, ArrayList, or an Iterator obtained from one, determine the running time as a function of n (where n is the size of the list) using big-Oh notation.</li>
             </ul>
