@@ -192,6 +192,36 @@ for (E e : list) {
         <td><i>O</i>(<i>n</i>)</td>
         <td>Equivalent to using an explicit iterator.</td>
     </tr>
+    <tr>
+        <td>Obtaining a sub-list view</td>
+        <td><code>list.subList(fromIndex, toIndex)</code></td>
+        <td><i>O</i>(1)</td>
+        <td>Since the method returns a view, the elements are not copied.</td>
+    </tr>
+    <tr>
+        <td>Obtaining a reverse-ordered view</td>
+        <td><code>list.reversed()</code></td>
+        <td><i>O</i>(1)</td>
+        <td>Since the method returns a view, the elements are not copied.</td>
+    </tr>
+    <tr>
+        <td>Searching for an element</td>
+        <td><code>list.contains(element)</code>, <code>list.indexOf(element)</code>, and <code>list.lastIndexOf(element)</code></td>
+        <td><i>O</i>(<i>n</i>)</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Sorting the list</td>
+        <td><code>list.sort(Comparator.naturalOrder())</code> (or using some other comparator)</td>
+        <td><i>O</i>(<i>n</i> log <i>n</i></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Clearing the list</td>
+        <td><code>list.clear()</code></td>
+        <td><i>O</i>(<i>n</i>)</td>
+        <td>The method sets all elements to null, to allow the garbage collector to delete the objects if there are no other references to them.</td>
+    </tr>
 </table>
 
 </body>
