@@ -93,13 +93,13 @@
         <td>Removal at random index</td>
         <td><code>list.remove(index)</code></td>
         <td><i>O</i>(<i>n</i>)</td>
-        <td>In the worst case, where <code>index</code> is 0, we need to shift all <i>n</i> - 1 remaining elements to the right. Even in the average case, we have to shift about <i>n</i>/2 elements to the right, and <i>n</i>/2 is <i>O</i>(<i>n</i>).</td>
+        <td>In the worst case, where <code>index</code> is 0, we need to shift all <i>n</i> - 1 remaining elements to the left. Even in the average case, we have to shift about <i>n</i>/2 elements to the left, and <i>n</i>/2 is <i>O</i>(<i>n</i>).</td>
     </tr>
     <tr>
         <td>Removal at front</td>
         <td><code>list.remove(0)</code> or <code>list.removeFirst()</code></td>
         <td><i>O</i>(<i>n</i>)</td>
-        <td>We need to shift all <i>n</i> - 1 remaining elements to the right.</td>
+        <td>We need to shift all <i>n</i> - 1 remaining elements to the left.</td>
     </tr>
     <tr>
         <td>Removal at end</td>
