@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ArrayList Complexity</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+
+<body>
+
+<h2>Time complexity of ArrayList operations</h2>
+
+<p>
+    <ul>
+        <li>Suppose that <code>list</code> refers to an ArrayList&lt;E&gt;, <code>element</code> is a variable of type E, and <code>index</code> is a random int in the range [0, list.size()).</li>
+        <li>Suppose that <code>iter</code> is an Iterator&lt;E&gt; obtained via <code>list.iterator()</code>. It is possible that <code>iter</code> has been moved forward using <code>iter.next()</code>; that is, the cursor is currently pointing at a random position in the list.</li>
+        <li>Let <i>n</i> be <code>list.size()</code>.</li>
+    </ul>
+    
+</p>
+
+<table>
+    <tr>
+        <th>Operation</th>
+        <th>Code</th>
+        <th>Running time</th>
+        <th>Explanation</th>
+    </tr>
+    <tr>
+        <td>
+            Insertion at random index
+        </td>
+        <td>
+            <code>list.add(index, element)</code>
+        </td>
+        <td>
+            <i>O</i>(<i>n</i>)
+        </td>
+        <td>
+            In the worst case, where <code>index</code> is 0, we need to shift all <i>n</i> elements to the right. Even in the average case, we have to shift <i>n</i>/2 elements to the right, and <i>n</i>/2 is <i>O</i>(<i>n</i>).
+        </td>
+    </tr>
+    <tr>
+        <td>Insertion at front</td>
+        <td><code>list.add(element)</code> or <code>list.add(list.size(), element)</code> or <code>list.addLast(element)</code></td>
+        <td><i>O</i>(1) [amortized]</td>
+        <td>No elements need to shifted. Although in the worst case, when the array is full, a new array needs to be created and all <i>n</i> elements need to be copied to it, this <i>O</i>(<i>n</i>) resizing cost is spread out across <i>n</i> insertions, making the average cost per insertion constant.</td>
+    </tr>
+    <tr>
+        <td>Insertion at end</td>
+        <td><code>list.add(0, element)</code> or <code>list.addFirst(element)</code></td>
+        <td><i>O</i>(<i>n</i>)</td>
+        <td>We need to shift all <i>n</i> elements to the right.</td>
+    </tr>
+    <tr>
+        <td>Retrieval at random index</td>
+        <td><code>list.get(index)</code></td>
+        <td><i>O</i>(1)</td>
+        <td>An ArrayList is implemented with an array, which offers random access.</td>
+    </tr>
+    <tr>
+        <td>Retrieval at front</td>
+        <td><code>list.get(0)</code> or <code>list.getFirst()</code></td>
+        <td><i>O</i>(1)</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Retrieval at end</td>
+        <td><code>list.get(list.size() - 1)</code> or <code>list.getLast()</code></td>
+        <td><i>O</i>(1)</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Replacement at random index</td>
+        <td><code>list.set(index, element)</code></td>
+        <td><i>O</i>(1)</td>
+        <td>An ArrayList is implemented with an array, which offers random access.</td>
+    </tr>
+    <tr>
+        <td>Replacement at front</td>
+        <td><code>list.set(0, element)</code></td>
+        <td><i>O</i>(1)</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Replacement at end</td>
+        <td><code>list.set(list.size() - 1, element)</code></td>
+        <td><i>O</i>(1)</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Removal at random index</td>
+        <td><code>list.remove(index)</code></td>
+        <td><i>O</i>(<i>n</i>)</td>
+        <td>In the worst case, where <code>index</code> is 0, we need to shift all <i>n</i> - 1 remaining elements to the right. Even in the average case, we have to shift about <i>n</i>/2 elements to the right, and <i>n</i>/2 is <i>O</i>(<i>n</i>).</td>
+    </tr>
+    <tr>
+        <td>Removal at front</td>
+        <td><code>list.remove(0)</code> or <code>list.removeFirst()</code></td>
+        <td><i>O</i>(<i>n</i>)</td>
+        <td>We need to shift all <i>n</i> - 1 remaining elements to the right.</td>
+    </tr>
+    <tr>
+        <td>Removal at end</td>
+        <td><code>list.remove(list.size() - 1)</code> or <code>list.removeLast()</code></td>
+        <td><i>O</i>(1)</td>
+        <td>There are no elements to shift.</td>
+    </tr>
+    <tr>
+        <td>Removal by specifying an object</td>
+        <td><code>list.remove(element)</code></td>
+        <td><i>O</i>(<i>n</i>)</td>
+        <td>Same reasoning as for removal at a random index.</td>
+    </tr>
+    <tr>
+        <td>Obtaining the size</td>
+        <td><code>list.size()</code></td>
+        <td><i>O</i>(1)</td>
+        <td>ArrayList stores the size as as a field.</td>
+    </tr>
+    <tr>
+        <td>Determining whether empty</td>
+        <td><code>list.isEmpty()</code></td>
+        <td><i>O</i>(1)</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Obtaining an iterator</td>
+        <td><code>list.iterator()</code></td>
+        <td><i>O</i>(1)</td>
+        <td>Setting up an iterator does not require copying the elements of the list.</td>
+    </tr>
+    <tr>
+        <td>Obtaining the next element from the iterator</td>
+        <td><code>iter.next()</code></td>
+        <td><i>O</i>(1)</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Determining whether the iteration has another element</td>
+        <td><code>iter.hasNext()</code></td>
+        <td><i>O</i>(1)</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Using the iterator to remove the most-recently accessed element</td>
+        <td><code>iter.remove()</code></td>
+        <td><i>O</i>(<i>n</i>)</td>
+        <td>Same reasoning as for removal at a random index.</td>
+    </tr>
+    <tr>
+        <td>Printing the elements: old-fashioned <code>for</code> loop</td>
+        <td>
+<pre>
+for (int i = 0; i &lt; size(); i++) {
+    System.out.println(list.get(i));
+}
+</pre>
+        </td>
+        <td><i>O</i>(<i>n</i>)</td>
+        <td>We make <i>n</i> calls to <code>size()</code> and <i>n</i> calls to <code>get(int index)</code>, each of which takes constant time.</td>
+    </tr>
+    <tr>
+        <td>Printing the elements: explicit iterator</td>
+        <td>
+<pre>
+for (iter = list.iterator(); iter.hasNext(); ) {
+    System.out.println(iter.next());
+}
+</pre>
+            or
+<pre>
+iter = list.iterator();
+while (iter.hasNext()) {
+    System.out.println(iter.next());
+}
+</pre>
+        </td>
+        <td><i>O</i>(<i>n</i>)</td>
+        <td>We make <i>n</i> calls to <code>hasNext()</code> and <i>n</i> calls to <code>next()</code>, each of which takes constant time.</td>
+    </tr>
+    <tr>
+        <td>Printing the elements: enhanced <code>for</code> loop</td>
+        <td>
+<pre>
+for (E e : list) {
+    System.out.println(e);
+}
+</pre>
+        </td>
+        <td><i>O</i>(<i>n</i>)</td>
+        <td>Equivalent to using an explicit iterator.</td>
+    </tr>
+</table>
+
+</body>
