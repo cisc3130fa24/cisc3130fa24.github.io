@@ -40,6 +40,18 @@
         <td></td>
     </tr>
     <tr>
+        <td>Insertion at front</td>
+        <td><code>list.add(0, element)</code> or <code>list.addFirst(element)</code></td>
+        <td><i>O</i>(<i>n</i>)</td>
+        <td>We need to shift all <i>n</i> elements to the right.</td>
+    </tr>
+    <tr>
+        <td>Insertion at end</td>
+        <td><code>list.add(element)</code> or <code>list.add(list.size(), element)</code> or <code>list.addLast(element)</code></td>
+        <td><i>O</i>(1) [amortized]</td>
+        <td>No elements need to shifted. Although in the worst case, when the array is full, a new array needs to be created and all <i>n</i> elements need to be copied to it, this <i>O</i>(<i>n</i>) resizing cost is spread out across <i>n</i> insertions, making the average cost per insertion constant.</td>
+    </tr>
+    <tr>
         <td>
             Insertion at random index
         </td>
@@ -52,18 +64,6 @@
         <td>
             In the worst case, where <code>index</code> is 0, we need to shift all <i>n</i> elements to the right. Even in the average case, we have to shift <i>n</i>/2 elements to the right, and <i>n</i>/2 is <i>O</i>(<i>n</i>).
         </td>
-    </tr>
-    <tr>
-        <td>Insertion at end</td>
-        <td><code>list.add(element)</code> or <code>list.add(list.size(), element)</code> or <code>list.addLast(element)</code></td>
-        <td><i>O</i>(1) [amortized]</td>
-        <td>No elements need to shifted. Although in the worst case, when the array is full, a new array needs to be created and all <i>n</i> elements need to be copied to it, this <i>O</i>(<i>n</i>) resizing cost is spread out across <i>n</i> insertions, making the average cost per insertion constant.</td>
-    </tr>
-    <tr>
-        <td>Insertion at front</td>
-        <td><code>list.add(0, element)</code> or <code>list.addFirst(element)</code></td>
-        <td><i>O</i>(<i>n</i>)</td>
-        <td>We need to shift all <i>n</i> elements to the right.</td>
     </tr>
     <tr>
         <td>Retrieval at random index</td>
