@@ -28,6 +28,18 @@
         <th>Explanation</th>
     </tr>
     <tr>
+        <td>Creation with default initial capacity</td>
+        <td>new ArrayList&lt;&gt;()</td>
+        <td><i>O</i>(1)</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Creation with provided initial capacity</td>
+        <td>new ArrayList&lt;&gt;(initialCapacity)</td>
+        <td><i>O</i>(1)</td>
+        <td></td>
+    </tr>
+    <tr>
         <td>
             Insertion at random index
         </td>
@@ -196,13 +208,13 @@ for (E e : list) {
         <td>Obtaining a sub-list view</td>
         <td><code>list.subList(fromIndex, toIndex)</code></td>
         <td><i>O</i>(1)</td>
-        <td>Since the method returns a view, the elements are not copied.</td>
+        <td>The method returns a view, so elements are not copied.</td>
     </tr>
     <tr>
         <td>Obtaining a reverse-ordered view</td>
         <td><code>list.reversed()</code></td>
         <td><i>O</i>(1)</td>
-        <td>Since the method returns a view, the elements are not copied.</td>
+        <td>The method returns a view, so elements are not copied.</td>
     </tr>
     <tr>
         <td>Searching for an element</td>
