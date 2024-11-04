@@ -1,0 +1,215 @@
+// you were not asked to write this class
+class Point {
+    private final int x, y;
+
+    public Point(int x, int y) {
+        this.x = x;
+        this.y = y;
+    }
+
+    public int quadrant() {
+        if (x > 0 && y > 0) {
+            return 1;
+        } else if (x < 0 && y > 0) {
+            return 2;
+        } else if (x < 0 && y < 0) {
+            return 3;
+        } else if (x > 0 && y < 0) {
+            return 4;
+        } else {
+            return 0;
+        }
+    }
+
+    public double distanceTo(Point other) {
+        return Math.hypot(this.x - other.x, this.y - other.y);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (o instanceof Point other) {
+            return this.x == other.x && this.y == other.y;
+        } else {
+            return false;
+        }
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(x, y);
+    }
+}
+
+// question 1
+class Question1 {
+    public static void removeInQuadrant(Collection<Point> points, int quadrant) {
+        Iterator<Point> iterator = points.iterator();
+
+        while (iterator.hasNext()) {
+            if (iterator.next().quadrant() == quadrant) {
+                iterator.remove();
+            }
+        }
+    }
+}
+
+// question 2
+class Line implements Comparable<Line> {
+    private final Point start, end;
+
+    public Line(Point start, Point end) {
+        this.start = start;
+        this.end = end;
+    }
+
+    public double length() {
+        return this.start.distanceTo(this.end);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (o instanceof Line other) {
+            return this.start.equals(other.start) && this.end.equals(other.end);
+        } else {
+            return false;
+        }
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(start, end);
+    }
+
+    @Override
+    public int compareTo(Line other) {
+        return Double.compare(this.length(), other.length());
+    }
+}
+
+/*
+question 3
+(a) 0, 0
+(b) 1, 0
+(c) 3, 2
+(d) 2, 2
+(e) 1, 1
+ */
+
+// question 4
+class ArrayBoundedList<E> {
+    private final E[] elements;
+    private int size;
+
+    @SuppressWarnings("unchecked")
+    public ArrayBoundedList(int capacity) {
+        if (capacity < 0) {
+            throw new IllegalArgumentException("negative capacity");
+        }
+
+        elements = (E[]) new Object[capacity];
+    }
+
+    public void add(E element) {
+        if (size == elements.length) {
+            throw new IllegalStateException();
+        } else {
+            elements[size++] = element;
+        }
+    }
+
+    public E remove(int index) {
+        Objects.checkIndex(index, size);
+
+        E result = elements[index];
+
+        for (int i = index; i < size - 1; i++) {
+            elements[i] = elements[i + 1];
+        }
+
+        size--;
+        return result;
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder("[");
+
+        for (int i = 0; i < size; i++) {
+            sb.append(elements[i]);
+
+            if (i < size - 1) {
+                sb.append(", ");
+            }
+        }
+
+        return sb.append("]").toString();
+    }
+
+    public void rotateRight() {
+        if (size > 0) {
+            E temp = elements[size - 1];
+
+            for (int i = size - 1; i > 0; i--) {
+                elements[i] = elements[i - 1];
+            }
+
+            elements[0] = temp;
+        }
+    }
+}
+
+/*
+question 5:
+(a) 2, 7
+(b) 1-10
+(c) 1-4, 7-9
+(d) 1, 6
+ */
+
+/*
+question 6:
+5
+b
+1
+3
+[a, c, b]
+ */
+
+/*
+Question 7:
+7, 3, 5, 6
+ */
+
+/*
+Question 9:
+
+2^10    log_3(n)        (1/2)(3n + 5 + n)       2nlog(n) + 10n      n^2 + 100n
+        2log_10(n)                                                  (2n + 5 + n^3)/n
+ */
+
+/*
+Question 10:
+(a) O(n log n)
+(b) O(1)
+(c) O(n^2)
+ */
+
+/*
+Question 11:
+(a) O(1)
+(b) O(1)
+(c) O(1)
+(d) O(1)
+(e) O(n)
+(f) O(n)
+(g) O(n)
+(h) O(n)
+(i) O(n)
+ */
+
+
+/*
+Question 12:
+(a) O(n^2)
+(b) [e, aaaa, cc]
+ */
