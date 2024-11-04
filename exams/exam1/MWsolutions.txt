@@ -162,7 +162,7 @@ class ArrayBoundedList<E> {
 question 5:
 (a) 2, 7
 (b) 1-10
-(c) 1-4, 7-9
+(c) 2-4, 7-9
 (d) 1, 6
  */
 
